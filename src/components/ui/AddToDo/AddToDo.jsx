@@ -27,14 +27,14 @@ const AddToDo = () => {
             <div className="text-lg font-semibold">New ToDo</div>
             <input
               ref={newToDoRef}
-              className="p-1 border border-stone-400"
+              className="p-1 border border-stone-300"
               type="text"
               placeholder={placeholder.theTextOfTheTask}
               required
             />
           </label>
           <button
-            className="self-end p-1 border border-stone-500 bg-stone-200"
+            className="self-end p-1 border border-stone-300 bg-stone-300"
             type="submit"
             onClick={handleAddToDo}
           >
