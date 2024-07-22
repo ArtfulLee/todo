@@ -15,19 +15,19 @@ const ToDoList = () => {
   return (
     <>
       <AddToDo />
-      <div>
-        <ul className="space-y-1">
-          <div className="text-center text-l underline">ToDo List</div>
-          {!!todos &&
-            todos.map((todo) => {
-              return (
-                <li key={todo.id}>
-                  <ToDo todo={todo} />
-                </li>
-              );
-            })}
-        </ul>
-      </div>
+      <ul className="py-2 px-4 space-y-1">
+        <div className="text-center text-l underline cursor-default">
+          ToDo List
+        </div>
+        {!!todos &&
+          todos.map((todo) => {
+            return (
+              <li key={todo.id}>
+                <ToDo todo={todo} />
+              </li>
+            );
+          })}
+      </ul>
     </>
   );
 };
