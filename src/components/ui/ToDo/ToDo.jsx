@@ -1,3 +1,6 @@
+// store
+import useToDoStore from "../../store/useToDoStore";
+
 /**
  *
  * @param {object} props
@@ -7,13 +10,34 @@
  * @returns {JSX.Element}
  */
 const ToDo = (props) => {
+  const { deleteToDo, editTodo } = useToDoStore((state) => ({
+    deleteToDo: state.deleteToDo,
+    editTodo: state.editTodo,
+  }));
+
+  // Обработчик удаления ToDo
+  const handleDeleteToDo = (id) => {
+    deleteToDo(id);
+  };
+
   const { todo } = props;
   return (
-    <input
-      className="w-min cursor-default read-only:outline-none"
-      readOnly
-      value={todo.title}
-    ></input>
+    <>
+      <div className="flex justify-center space-x-1">
+        <textarea
+          className="max-w-60 cursor-default read-only:outline-none resize-none"
+          readOnly
+          value={todo.title}
+        ></textarea>
+        <button
+          className="self-end p-1 border border-red-300 bg-red-300"
+          type="button"
+          onClick={() => handleDeleteToDo(todo.id)}
+        >
+          Delete
+        </button>
+      </div>
+    </>
   );
 };
 

@@ -16,8 +16,8 @@ const ToDoList = () => {
     <>
       <AddToDo />
       <div>
-        <ul className="text-center cursor-default">
-          ToDo List
+        <ul>
+          <div className="text-center text-l underline">ToDo List</div>
           {!!todos &&
             todos.map((todo) => {
               return (
