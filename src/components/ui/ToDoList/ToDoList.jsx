@@ -5,17 +5,19 @@ import ToDo from "../ToDo/ToDo";
 // store
 import useToDoStore from "../../store/useToDoStore";
 
+/**
+ * Компонент списка ToDo
+ * @returns {JSX.Element}
+ */
 const ToDoList = () => {
   const todos = useToDoStore((state) => state.todos);
-
-  console.log(todos);
 
   return (
     <>
       <AddToDo />
       <div>
-        <ul className="text-center">
-          Tasks list
+        <ul className="text-center cursor-default">
+          ToDo List
           {!!todos &&
             todos.map((todo) => {
               return (
