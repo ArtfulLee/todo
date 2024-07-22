@@ -22,7 +22,7 @@ const ToDo = (props) => {
     <>
       <div className="flex justify-center space-x-1">
         <textarea
-          className="md:min-w-96 cursor-default read-only:outline-none overflow-hidden"
+          className="p-1 md:min-w-96 h-[34px] cursor-default read-only:outline-none overflow-hidden"
           readOnly
           value={todo.title}
         ></textarea>
