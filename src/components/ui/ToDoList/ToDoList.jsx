@@ -16,7 +16,7 @@ const ToDoList = () => {
     <>
       <AddToDo />
       <div>
-        <ul>
+        <ul className="space-y-1">
           <div className="text-center text-l underline">ToDo List</div>
           {!!todos &&
             todos.map((todo) => {

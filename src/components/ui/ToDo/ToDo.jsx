@@ -10,10 +10,7 @@ import useToDoStore from "../../store/useToDoStore";
  * @returns {JSX.Element}
  */
 const ToDo = (props) => {
-  const { deleteToDo, editTodo } = useToDoStore((state) => ({
-    deleteToDo: state.deleteToDo,
-    editTodo: state.editTodo,
-  }));
+  const deleteToDo = useToDoStore((state) => state.deleteToDo);
 
   // Обработчик удаления ToDo
   const handleDeleteToDo = (id) => {
@@ -25,7 +22,7 @@ const ToDo = (props) => {
     <>
       <div className="flex justify-center space-x-1">
         <textarea
-          className="max-w-60 cursor-default read-only:outline-none resize-none"
+          className="md:min-w-96 cursor-default read-only:outline-none overflow-hidden"
           readOnly
           value={todo.title}
         ></textarea>
