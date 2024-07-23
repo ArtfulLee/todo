@@ -17,6 +17,7 @@ const AddToDo = () => {
   const handleAddToDo = (event) => {
     event.preventDefault();
     addToDo(newToDoRef.current.value);
+    newToDoRef.current.value = "";
   };
 
   return (
@@ -33,7 +34,7 @@ const AddToDo = () => {
           />
         </label>
         <button
-          className="self-end p-1 border border-stone-300 bg-stone-300"
+          className="w-24 self-end p-1 border border-stone-300 bg-stone-300"
           type="submit"
           onClick={handleAddToDo}
         >
