@@ -45,6 +45,19 @@ const useToDoStore = create(
             }),
           ],
         }),
+
+      /**
+       * Функция редактирования ToDo.
+       */
+      editToDo: (id, title) =>
+        set({
+          todos: [
+            ...get().todos.map((todo) => {
+              if (todo.id === id) todo.title = title;
+              return todo;
+            }),
+          ],
+        }),
     }),
     /* for localStorage. */
     { name: "toDoStorage" }
