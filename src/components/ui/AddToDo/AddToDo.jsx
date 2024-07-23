@@ -16,6 +16,12 @@ const AddToDo = () => {
 
   const handleAddToDo = (event) => {
     event.preventDefault();
+
+    /* Fast fix for empty input */
+    if (!newToDoRef.current.value.length)
+      return alert("You need write the text of the todo");
+    /* Fast fix for empty input */
+
     addToDo(newToDoRef.current.value);
     newToDoRef.current.value = "";
   };
