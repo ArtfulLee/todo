@@ -1,5 +1,5 @@
 const placeholder = {
-  theTextOfTheTask: "The text of the task",
+  theTextOfTheToDo: "The text of the ToDo",
 };
 
 export default placeholder;

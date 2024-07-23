@@ -4,8 +4,8 @@ import ToDoList from "./components/ui/ToDoList/ToDoList";
 export default function App() {
   return (
     <>
-      <div className="bg-stone-50 min-h-screen">
-        <div className="container mx-auto font-mono font-normal text-stone-900 not-italic">
+      <div className="bg-stone-100 min-h-screen">
+        <div className="container mx-auto font-mono font-normal text-stone-950 not-italic">
           <Header />
           <ToDoList />
         </div>

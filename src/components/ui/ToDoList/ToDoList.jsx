@@ -1,12 +1,12 @@
-// components
+// components.
 import AddToDo from "../AddToDo/AddToDo";
 import ToDo from "../ToDo/ToDo";
 
-// store
+// store.
 import useToDoStore from "../../store/useToDoStore";
 
 /**
- * Компонент списка ToDo
+ * Компонент списка ToDo.
  * @returns {JSX.Element}
  */
 const ToDoList = () => {
@@ -15,19 +15,19 @@ const ToDoList = () => {
   return (
     <>
       <AddToDo />
-      <div>
-        <ul className="space-y-1">
-          <div className="text-center text-l underline">ToDo List</div>
-          {!!todos &&
-            todos.map((todo) => {
-              return (
-                <li key={todo.id}>
-                  <ToDo todo={todo} />
-                </li>
-              );
-            })}
-        </ul>
-      </div>
+      <ul className="py-2 px-4 space-y-1">
+        <div className="text-center text-l underline cursor-default">
+          ToDo List
+        </div>
+        {!!todos &&
+          todos.map((todo) => {
+            return (
+              <li key={todo.id}>
+                <ToDo todo={todo} />
+              </li>
+            );
+          })}
+      </ul>
     </>
   );
 };
