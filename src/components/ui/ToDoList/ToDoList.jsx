@@ -1,12 +1,12 @@
-// components
+// components.
 import AddToDo from "../AddToDo/AddToDo";
 import ToDo from "../ToDo/ToDo";
 
-// store
+// store.
 import useToDoStore from "../../store/useToDoStore";
 
 /**
- * Компонент списка ToDo
+ * Компонент списка ToDo.
  * @returns {JSX.Element}
  */
 const ToDoList = () => {

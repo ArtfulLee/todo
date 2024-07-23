@@ -2,24 +2,32 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 /**
- * Стор для хранения ToDo
+ * Стор для хранения ToDo.
  */
 const useToDoStore = create(
   persist(
     (set, get) => ({
       /**
-       * Начальный список ToDo
+       * Начальный список ToDo.
        */
       todos: [
         {
+          id: "0",
+          title: "First ToDo",
+        },
+        {
           id: "1",
-          title: "Do a Kickflip!",
+          title: "Second ToDo",
+        },
+        {
+          id: "2",
+          title: "Third ToDo",
         },
       ],
 
       /**
-       * Функция добавления новой ToDo
-       * @param {string} title - Текст нового ToDo
+       * Функция добавления новой ToDo.
+       * @param {string} title - Текст нового ToDo.
        */
       addToDo: (title) => {
         const newToDo = { id: crypto.randomUUID(), title };
@@ -27,7 +35,7 @@ const useToDoStore = create(
       },
 
       /**
-       * Функция удаления ToDo
+       * Функция удаления ToDo.
        */
       deleteToDo: (id) =>
         set({
@@ -38,7 +46,7 @@ const useToDoStore = create(
           ],
         }),
     }),
-    /* for localStorage */
+    /* for localStorage. */
     { name: "toDoStorage" }
   )
 );

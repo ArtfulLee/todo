@@ -1,12 +1,12 @@
-// constants
+// constants.
 import { useRef } from "react";
 import placeholder from "../../../constants/placeholder";
 
-// store
+// store.
 import useToDoStore from "../../store/useToDoStore";
 
 /**
- * Компонент для добавления новой ToDo
+ * Компонент для добавления новой ToDo.
  * @returns {JSX.Element}
  */
 const AddToDo = () => {
@@ -28,7 +28,7 @@ const AddToDo = () => {
             ref={newToDoRef}
             className="p-1 border border-stone-300"
             type="text"
-            placeholder={placeholder.theTextOfTheTask}
+            placeholder={placeholder.theTextOfTheToDo}
             required
           />
         </label>
