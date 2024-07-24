@@ -12,10 +12,10 @@ import useToDoStore from "../../store/useToDoStore";
  * @returns {JSX.Element}
  */
 const AddToDo = () => {
-  // Референт на новое ToDo.
+  // Референс на новое ToDo.
   const newToDoRef = useRef();
 
-  // Функция для сброса ввхода в инпут.
+  // Функция для отчистки поля ввода новой ToDo.
   const resetInput = () => {
     newToDoRef.current.value = "";
   };
@@ -29,7 +29,7 @@ const AddToDo = () => {
     /* Fast fix for empty input. */
     if (newToDoRef.current.value.trim() === "") {
       resetInput();
-      return alert("You need write the text of the todo");
+      return alert("You need to write the text of the todo");
     }
     /* Fast fix for empty input. */
 
@@ -52,7 +52,7 @@ const AddToDo = () => {
           />
         </label>
         <button
-          className="w-24 self-end p-1 border border-stone-300 bg-stone-300"
+          className="w-24 self-end p-1 border border-stone-300 bg-stone-300 hover:border-stone-200 hover:bg-stone-200"
           type="submit"
           onClick={handleAddToDo}
         >

@@ -60,7 +60,7 @@ const ToDo = (props) => {
               {todo.title}
             </textarea>
             <button
-              className="w-20 self-end p-1 border border-green-300 bg-green-300"
+              className="w-20 self-end p-1 border border-green-300 bg-green-300 hover:border-green-200 hover:bg-green-200"
               type="button"
               onClick={() => handleOkToDo(todo)}
             >
@@ -68,7 +68,7 @@ const ToDo = (props) => {
             </button>
 
             <button
-              className="w-20 self-end p-1 border border-red-300 bg-red-300"
+              className="w-20 self-end p-1 border border-red-300 bg-red-300 hover:border-red-200 hover:bg-red-200"
               type="button"
               onClick={() => handleCancelToDo()}
             >
@@ -83,14 +83,14 @@ const ToDo = (props) => {
               value={todo.title}
             ></textarea>
             <button
-              className="w-20 self-end p-1 border border-yellow-300 bg-yellow-300"
+              className="w-20 self-end p-1 border border-yellow-300 bg-yellow-300 hover:border-yellow-200 hover:bg-yellow-200"
               type="button"
               onClick={() => handleEditToDo(todo)}
             >
               Edit
             </button>
             <button
-              className="w-20 self-end p-1 border border-red-300 bg-red-300"
+              className="w-20 self-end p-1 border border-red-300 bg-red-300 hover:border-red-200 hover:bg-red-200"
               type="button"
               onClick={() => handleDeleteToDo(todo)}
             >
